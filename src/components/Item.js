@@ -1,26 +1,20 @@
 import React, { Component } from "react";
-import "./Item.css"
 
 export default class Item extends Component {
-    checkToggle = (e) => {
-        let isChecked = e.target.checked;
-        this.props.statusHandler(e.target.name, isChecked);
-    };
 
+    toggleHandle = (e) => {
+        this.props.statusHandler(e.target.name)
+    }
     render() {
         return (
-            <li
-                className={
-                    this.props.status === "completed" ? "completed" : "incomplete"
-                }
-            >
+            <li>
                 <input
                     type="checkbox"
-                    id="checkbox"
                     name={this.props.title}
-                    onChange={this.checkToggle}
+                    // checked={!this.props.status}
+                    onChange={this.toggleHandle}
                 />
-                {this.props.title} - {this.props.status}
+                {this.props.title} - {this.props.status ? "completed":"incomplete"}
             </li>
         );
     }

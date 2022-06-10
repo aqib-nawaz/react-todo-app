@@ -5,7 +5,7 @@ export default class Add extends Component {
         super();
         this.state = ({
             title: "",
-            status: "incomplete",
+            status: false,
         });
     }
 

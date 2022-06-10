@@ -13,6 +13,7 @@ export default class List extends Component {
                                 key={task.title}
                                 title={task.title}
                                 status={task.status}
+                                task={task} 
                             />
                         );
                     })}

@@ -9,7 +9,7 @@ export default class TaskDetails extends Component {
                 incomplete Tasks:{" "}
                 {
                     this.props.tasks.filter((task) => {
-                        return task.status === "incomplete";
+                        return task.status === false;
                     }).length
                 }
             </h3>
@@ -17,7 +17,7 @@ export default class TaskDetails extends Component {
                 Completed Tasks:{" "}
                 {
                     this.props.tasks.filter((task) => {
-                        return task.status === "completed";
+                        return task.status === true;
                     }).length
                 }
             </h3>
