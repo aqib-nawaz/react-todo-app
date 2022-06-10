@@ -1,9 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class Item extends Component {
     render() {
         return (
-            <div>Item</div>
-        )
+            <li>
+                <input type="checkbox" id="checkbox" />
+                {this.props.title} - {this.props.status}
+            </li>
+        );
     }
 }
