@@ -8,7 +8,12 @@ export default class List extends Component {
                 <ul>
                     {this.props.tasks.map((task) => {
                         return (
-                            <Item key={task.title} title={task.title} status={task.status} />
+                            <Item
+                                statusHandler={this.props.statusHandler}
+                                key={task.title}
+                                title={task.title}
+                                status={task.status}
+                            />
                         );
                     })}
                 </ul>

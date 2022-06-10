@@ -1,42 +1,52 @@
-import React, { Component } from 'react'
-import Add from './components/Add'
-import List from './components/List'
-import Reset from './components/Reset'
+import React, { Component } from "react";
+import Add from "./components/Add";
+import List from "./components/List";
+import Reset from "./components/Reset";
+import TaskDetails from "./components/TaskDetails";
 
 export default class App extends Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
+
     this.state = {
-      tasks: [
-        { title: "Todo App", status: "incomplete" },
-        { title: "Image Search", status: "completed" },
-        { title: "Weather App", status: "incomplete" },
-        { title: "New App", status: "incomplete" },
-        { title: "Expense Tracker", status: "incomplete" },
-        { title: "Covid Tracker", status: "incomplete" }
-      ] 
-    }
+      tasks: [{ title: "Todo App", status: "incomplete" }],
+    };
+
   }
 
+  inputHandler = (newTask, newTaskStatus) => {
+
+    this.setState({
+      tasks: [...this.state.tasks, { title: newTask, status: newTaskStatus }],
+    });
+
+  };
+
+  statusToggleHandler = (checkedTask, isToggleChecked) => {
+
+    this.setState({
+      tasks: this.state.tasks.map((task) => {
+        return {
+          title: task.title,
+          status:
+            task.title === checkedTask && isToggleChecked
+              ? "completed"
+              : "incomplete",
+        };
+      }),
+    });
+
+  };
 
   render() {
     return (
       <div>
         <h1>Todo App</h1>
-        <Add/>
-        <List tasks= {this.state.tasks}/>
+        <Add addInput={this.inputHandler} />
+        <List tasks={this.state.tasks} statusHandler={this.statusToggleHandler} />
         <Reset />
-
-        <h1>Task Details</h1>
-        <h3>Total Tasks: {this.state.tasks.length}</h3>
-        <h3>incomplete Tasks: {this.state.tasks.filter((task) => {
-          return (task.status === "incomplete")
-        }).length}</h3>
-        <h3>Completed Tasks: {this.state.tasks.filter((task) => {
-          return (task.status === "completed")
-        }).length}</h3>
-
+        <TaskDetails tasks={this.state.tasks} />
       </div>
-    )
+    );
   }
 }

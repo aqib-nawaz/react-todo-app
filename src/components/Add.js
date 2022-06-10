@@ -5,12 +5,17 @@ export default class Add extends Component {
         super();
         this.state = ({
             title: "",
-            status: "",
+            status: "incomplete",
         });
     }
+
     submitHandler = (e) => {
         e.preventDefault()
-
+        this.props.addInput(this.state.title, this.state.status )
+        
+        this.setState({
+            title:""
+        })
     }
 
     inputHandler = (e) => {
