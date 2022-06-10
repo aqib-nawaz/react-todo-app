@@ -1,0 +1,22 @@
+.item-container{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    background-color: blueviolet;
+    margin: .625rem auto;
+    padding: 2rem;
+    flex-direction: column;
+    border-radius: 1.25rem;
+}
+.item-container-header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+ul{
+    margin: 0;
+}
+.list-items{
+    width: 100%;
+    display: block;
+}

@@ -1,0 +1,36 @@
+.input-container{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    background-color: blueviolet;
+    margin: 0 auto;
+    padding: 1rem 2rem 1rem 2rem;
+    flex-direction: column;
+    border-radius: 1.25rem;
+}
+#input{
+    width: 100%;
+    height: 2.375rem;
+    margin-top: .575rem;
+    padding-left: 20px;
+}
+.input-btn-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+    margin-top: .625rem;
+}
+.input-button{
+    width: 6.25rem;
+    height: 2.375rem;
+    margin-top: 6px;
+    margin-left: 1rem;
+    
+}
+.close-input-btn{
+    width: 6.25rem;
+    height: 2.375rem;
+    margin-top: 6px;
+}
+

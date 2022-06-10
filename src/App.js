@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Add from "./components/Add";
 import List from "./components/List";
-import Reset from "./components/Reset";
 import TaskDetails from "./components/TaskDetails";
+import "./App.css";
 
 export default class App extends Component {
   constructor() {
@@ -19,19 +19,28 @@ export default class App extends Component {
   };
 
   statusHandler = (todo) => {
-      this.setState({
-        tasks: this.state.tasks.map((task) => task.title === todo ? 
-        {...task, status: !task.status} : task)
-      })
+    this.setState({
+      tasks: this.state.tasks.map((task) =>
+        task.title === todo ? { title: task.title, status: !task.status } : task
+      ),
+    });
+  };
+
+  resetHandler = () => {
+    this.setState({
+      tasks: [],
+    });
   };
 
   render() {
     return (
-      <div>
-        <h1>Todo App</h1>
+      <div className="container text-center">
         <Add addInput={this.inputHandler} />
-        <List tasks={this.state.tasks} statusHandler={this.statusHandler} />
-        <Reset />
+        <List
+          tasks={this.state.tasks}
+          statusHandler={this.statusHandler}
+          resetHandler={this.resetHandler}
+        />
         <TaskDetails tasks={this.state.tasks} />
       </div>
     );

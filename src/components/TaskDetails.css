@@ -1,0 +1,11 @@
+.tasks-details-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    background-color: blueviolet;
+    text-align: center;
+}
+.tasks-details-container h5{
+    color: white;
+}
