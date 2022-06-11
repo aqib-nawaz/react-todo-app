@@ -42,24 +42,43 @@ export default class TaskDetails extends Component {
 
                 <div className="tasks-details-container">
                     <div>
-                        <Button onClick={this.allTasks} value="All" />:{" "}
-                        {this.props.tasks.length}
+                        <Button
+                            className="task-detail-btn"
+                            onClick={this.allTasks}
+                            value="All"
+                        />
+                        <div className="counter-container">
+                            {this.props.tasks.length}
+                        </div>
                     </div>
                     <div>
-                        <Button onClick={this.incompleteTasks} value="Incomplete" />
-                        {
-                            this.props.tasks.filter((task) => {
-                                return task.status === false;
-                            }).length
-                        }
+                        <Button
+                            className="task-detail-btn"
+                            onClick={this.incompleteTasks}
+                            value="Incomplete"
+                        />
+                        <div className="counter-container">
+                            {
+                                this.props.tasks.filter((task) => {
+                                    return task.status === false;
+                                }).length
+                            }
+                        </div>
+                        
                     </div>
                     <div>
-                        <Button onClick={this.completedTasks} value="completed" />
-                        {
-                            this.props.tasks.filter((task) => {
-                                return task.status === true;
-                            }).length
-                        }
+                        <Button
+                            className="task-detail-btn"
+                            onClick={this.completedTasks}
+                            value="completed"
+                        />
+                        <div  className="counter-container">
+                            {   
+                                this.props.tasks.filter((task) => {
+                                    return task.status === true;
+                                }).length
+                            }
+                        </div>
                     </div>
                 </div>
 

@@ -5,6 +5,10 @@ export default class Item extends Component {
     toggleHandle = (e) => {
         this.props.statusHandler(e.target.name);
     };
+
+    deleteItemHandler = (e) => {
+        console.log(e)
+    }
     
     render() {
         return (
@@ -17,7 +21,7 @@ export default class Item extends Component {
                         onChange={this.toggleHandle}
                     />
                     <span className="item-title">{this.props.title}</span>
-                    {this.props.status?<i className="fa-solid fa-trash"></i>: ""}
+                    {this.props.status?<i className="fa-solid fa-trash" onClick={this.deleteItemHandler}></i>: ""}
                 </div>
             </li>
         );

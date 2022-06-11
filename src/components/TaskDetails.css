@@ -15,3 +15,18 @@
     background-color: white;
     border-color: white;
 }
+.task-detail-btn{
+    width: 7.5rem;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+}
+.task-detail-btn:hover{
+    background-color: white;
+    color:blueviolet;
+}
+.counter-container{
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
