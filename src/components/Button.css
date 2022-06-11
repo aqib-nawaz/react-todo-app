@@ -1,6 +1,6 @@
 .btn {
-    width: 6.25rem;
+    width: 4.05rem;
     border-radius: 2px;
-    border: 2px solid white;
-    padding: 4px;
+    /* border: 2px solid white; */
+    padding: 5px;
 }

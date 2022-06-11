@@ -36,11 +36,13 @@ export default class Add extends Component {
                         value={this.state.title}
                         id="input"
                         placeholder="Add todo"
+            
                     />
+                    <i className="fa-solid fa-magnifying-glass"></i>
                 </form>
                 <div className="input-btn-container">
-                    <Button className="close-input-btn btn-danger" value= "Close"/>
-                    <Button className="input-button btn-success" value= "Add Task"/>
+                    <Button className="close-input-btn btn-danger" value={<i className="fa-solid fa-xmark"></i>} />
+                    <Button className="input-button" value="Add"/>
                 </div>
             </div>
         );

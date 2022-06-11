@@ -12,10 +12,12 @@ export default class Item extends Component {
                 <div className="todo-item">
                     <input
                         type="checkbox"
+                        checked={this.props.status}
                         name={this.props.title}
                         onChange={this.toggleHandle}
                     />
-                    {this.props.title} - {this.props.status ? "completed" : "incomplete"}
+                    <span className="item-title">{this.props.title}</span>
+                    {this.props.status?<i className="fa-solid fa-trash"></i>: ""}
                 </div>
             </li>
         );

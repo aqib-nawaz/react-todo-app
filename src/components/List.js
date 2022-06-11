@@ -7,7 +7,7 @@ export default class List extends Component {
         return (
             <div className="item-container text-white">
                 <div className="item-container-header">
-                    <h2 className="text-center">Tasks</h2>
+                    <h4 className="text-center">Tasks</h4>
                     <Button onClick= {this.props.resetHandler} value="Reset"/>
                 </div>
                 <ul >

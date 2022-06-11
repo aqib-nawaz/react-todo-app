@@ -1,7 +1,7 @@
 .item-container{
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 40%;
     background-color: blueviolet;
     margin: .625rem auto;
     padding: 2rem;

@@ -5,7 +5,13 @@
     padding: 10px;
     background-color: blueviolet;
     text-align: center;
+    margin-top: .625rem;
 }
 .tasks-details-container h5{
     color: white;
+}
+.tasks-details-container h5:hover{
+    color: black;
+    background-color: white;
+    border-color: white;
 }
