@@ -6,8 +6,9 @@ export default class Add extends Component {
         super();
         this.state = {
             title: "",
-            status: false,
+            status: "incomplete",
             display: true,
+            searchBtnActive: false,
         };
     }
 
@@ -24,6 +25,10 @@ export default class Add extends Component {
         this.setState({
             title: e.target.value,
         });
+
+        if(this.state.searchBtnActive){
+            this.props.searchHandler(e.target.value)
+        }
     };
 
     displayInputField = () => {
@@ -32,10 +37,15 @@ export default class Add extends Component {
         });
     };
 
+    searchHandler = () => {
+        this.setState({
+            searchBtnActive: !this.state.searchBtnActive,
+        });
+    };
     render() {
         return (
             <div className="input-container">
-                <h2 className="text-white">Todo App</h2>
+                <h3 className="text-white">Todo App</h3>
 
                 <div>
                     {this.state.display ? (
@@ -52,19 +62,30 @@ export default class Add extends Component {
                                 <input
                                     type="text"
                                     id="input"
-                                    placeholder="Add todo"
+                                    placeholder={
+                                        this.state.searchBtnActive ? "Search" : "Add todo"
+                                    }
                                     value={this.state.title}
                                     onChange={this.inputHandler}
                                 />
-                                <i className="fa-solid fa-magnifying-glass"></i>
+                                {this.state.searchBtnActive && (
+                                    <i className="fa-solid fa-magnifying-glass"></i>
+                                )}
                             </form>
                             <div className="input-btn-container">
                                 <Button
                                     className="close-input-btn btn-danger"
-                                    value={<i className="fa-solid fa-xmark"></i>}
+                                    value="Close"
                                     onClick={this.displayInputField}
                                 />
-                                <Button className="input-button" value="Add" type="submit" onClick={this.submitHandler} />
+                                <Button
+                                    className="search-button"
+                                    value="Search"
+                                    id="btn-search"
+                                    name="search"
+                                    type="submit"
+                                    onClick={this.searchHandler}
+                                />
                             </div>
                         </div>
                     )}

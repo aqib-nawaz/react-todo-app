@@ -1,0 +1,39 @@
+.btn-container{
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+}
+@media (max-width: 760px) {
+    .btn-container{
+        width: 90%;
+        padding: 10px;
+        justify-content: center;
+    }
+}
+
+
+.task-detail-btn{
+    width: 5.7rem;
+    background-color: transparent;
+    color: blueviolet;
+    outline: none;
+    border: 2px solid blueviolet;
+    padding: 6px;
+    margin: 2px 1px 2px 1px ;
+}
+
+.task-detail-btn:hover{
+    background-color: blueviolet;
+    border: 2px solid blueviolet;
+    color: white;
+}
+/* .task-detail-btn:active{
+    background-color: white !important;
+    color:blueviolet !important;
+} */

@@ -1,12 +1,12 @@
 .item-container{
     display: flex;
     justify-content: center;
-    width: 40%;
+    width: 50%;
     background-color: blueviolet;
     margin: .625rem auto;
     padding: 2rem;
     flex-direction: column;
-    border-radius: 1.25rem;
+    border-radius: 2px;
 }
 .item-container-header{
     display: flex;
@@ -19,4 +19,10 @@ ul{
 .list-items{
     width: 100%;
     display: block;
+}
+
+@media (max-width:760px) {
+    .item-container{
+        width: 90%;
+    }
 }

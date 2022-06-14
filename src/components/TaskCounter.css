@@ -1,0 +1,16 @@
+.counter-container{
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 6px;
+    color: blueviolet;
+    background-color: rgb(255, 255, 255);;
+}
+@media (max-width: 760px) {
+    .counter-container{
+        width: 90%;
+    }
+}

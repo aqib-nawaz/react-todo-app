@@ -1,12 +1,14 @@
 .input-container{
     display: flex;
     justify-content: center;
-    width: 40%;
+    width: 50%;
     background-color: blueviolet;
-    margin: 0 auto;
-    padding: 1rem 2rem 1rem 2rem;
+    position: relative;
+    top: 9px;
+    margin: 0 auto 0 auto;
+    padding:0 2rem 1rem 2rem;
     flex-direction: column;
-    border-radius: 1.25rem;
+    border-radius: 2px;
 }
 .input-container form{
     position: relative;
@@ -27,9 +29,9 @@
     width: 100%;
     margin-top: .625rem;
 }
-.input-button{
+.search-button{
     width: 3.05rem;
-    height: 2.075rem;
+    height: 2rem;
     margin-top: 6px;
     margin-left: 1rem;
     font-size: 18px;
@@ -41,7 +43,7 @@
 }
 .close-input-btn{
     width: 3.05rem;
-    height: 2.075rem;
+    height: 2rem;
     margin-top: 6px;
     font-size: 20px;
     display: flex;
@@ -59,4 +61,10 @@
 }
 .display-input-field{
     width: 200px;
+}
+
+@media (max-width: 760px) {
+    .input-container{
+        width: 90%;
+    }
 }

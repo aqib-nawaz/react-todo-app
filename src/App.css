@@ -1,3 +1,6 @@
 .container {
-    background-color: rgba(0, 0, 0, 0.724)
+    background-color: rgb(212 212 212 / 60%);
+    margin: 0 auto;
+    z-index: -11111;
+    height: 100vh;
 }

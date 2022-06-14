@@ -1,27 +1,39 @@
 import React, { Component } from "react";
-import "./Item.css"
+import "./Item.css";
 export default class Item extends Component {
-
-    toggleHandle = (e) => {
-        this.props.statusHandler(e.target.name);
+    toggleHandle = (toggleTaskTitle) => {
+        this.props.statusHandler(toggleTaskTitle);
     };
 
-    deleteItemHandler = (e) => {
-        console.log(e)
-    }
-    
+    deleteItemHandler = (title) => {
+        this.props.deleteHandler(title)
+    };
+
     render() {
         return (
-            <li className={ this.props.status? "completed":"incomplete"}>
+            <li>
                 <div className="todo-item">
                     <input
                         type="checkbox"
-                        checked={this.props.status}
+                        checked={this.props.status === "completed"}
                         name={this.props.title}
-                        onChange={this.toggleHandle}
+                        onChange={(e) => this.toggleHandle(this.props.title)}
                     />
-                    <span className="item-title">{this.props.title}</span>
-                    {this.props.status?<i className="fa-solid fa-trash" onClick={this.deleteItemHandler}></i>: ""}
+                    <span
+                        className={
+                            this.props.status === "completed"
+                                ? "completed item-title"
+                                : "incomplete item-title"
+                        }
+                    >
+                        {this.props.title}
+                    </span>
+                    {this.props.status === "completed" && (
+                        <i
+                            className="fa-solid fa-trash"
+                            onClick={e => this.deleteItemHandler(this.props.title)}
+                        ></i>
+                    )}
                 </div>
             </li>
         );
