@@ -14,6 +14,7 @@ export default class App extends Component {
     };
   }
   filterFlag = false;
+  
   componentDidUpdate() {
     localStorage.setItem("taskList", JSON.stringify(this.state.tasks));
   }
@@ -101,7 +102,6 @@ export default class App extends Component {
   searchHandler = (title) => {
     this.filterFlag = true;
     let regExp = new RegExp(title, 'i');
-    // const matches = this.state.list.filter((item) => regExp.test(item));
     this.setState({
       taskFilter: this.state.taskFilter.filter(task => regExp.test(task.title))
     })
