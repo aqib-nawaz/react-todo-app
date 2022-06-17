@@ -15,7 +15,7 @@ This is a React Todo App, Which I have created using class-based components. It 
 
 **App UI**
 ![App UI](./src/app-screenshots/1.png)
-
+- - - -
 ## Here is a gif, showing how it works..!
 
 ![App gif](./src/app-screenshots/todo-app.gif)
