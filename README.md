@@ -9,23 +9,19 @@ This is a React Todo App, Which I have created using class-based components. It 
 - [x] LocalStorage
 - [X] Reset
   
-Markup :  - - - -
+- - - -
 ## App Screenshots
 
-Here is some of the screenshots
+
 **App UI**
 ![App UI](./src/app-screenshots/1.png)
 
-**App UI Including Tasks**
-![App UI Including Tasks](./src/app-screenshots/2.png)
-
-
-## Here is a Gif showing how it works
+## Here is a gif, showing how it works..!
 
 ![App gif](./src/app-screenshots/todo-app.gif)
 
 
-Markup :  - - - -
+- - - -
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
